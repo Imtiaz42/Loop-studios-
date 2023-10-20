@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    background: url(./images/desktop/image-hero.jpg) center center/cover;
+    position: relative;
+}
+
+.overly {
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+img.logo {
+    width: 175px;
+}
+
+
+nav ul {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: -250px;
+}
+
+nav ul li {
+    margin-top: .5rem;
+}
+
+ul li:hover{
+    cursor: pointer;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+/* Mobile menu css */
+#open-menu {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#open-menu img {
+    width: 40px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.mob-menu {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    padding: 1rem;
+    z-index: 1;
+    transform: translateX(0);
+}
+
+#close-menu {
+    width: 40px;
+    cursor: pointer;
+    padding-right: 1rem;
+}
+
+/* logo and close icon for mobile menu */
+
+.logo-menu {
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* hero heading */
+h1 {
+    padding: 1rem;
+    border: 2px solid white;
+    text-transform: uppercase;
+    margin-top: 10rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    font-size: 2.1rem;
+    max-width: 100%;
+}
+
+span {
+    font-family: 'Josefin Sans', sans-serif;
+    display: block;
+}
+
+
+/* About section */
+.about {
+    margin-top: 2.3rem;
+    padding: 1rem;
+}
+
+.about-image img {
+    width: 100%;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-text h2 {
+    margin-top: 2rem;
+
+}
+
+.about-text p {
+    margin-top: 1rem;
+    line-height: 1.5;
+    color: hsl(0, 0%, 41%);
+
+}
+
+
+/*    testimonials section */
+
+h3 {
+    margin: 1rem 0;
+}
+
+.testimonials-section {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.card img:hover{
+    cursor: pointer;
+    opacity: .3;
+}
+
+.card:hover h5{
+    color: black;
+    opacity: 1;
+    z-index: 1;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card h5 {
+    color: white;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    margin: 0;
+    font-size: 20px;
+    text-align: start;
+}
+
+.btn {
+    color: black;
+    border: 2px solid black;
+    background-color: white;
+    padding: .5rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.btn-1 {
+    display: none;
+}
+
+/*      footer     */
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-top: 1.3rem;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer span {
+    display: inline-block;
+    margin-top: 2.5rem;
+    padding: 5px;
+}
+
+footer p {
+    margin-top: .5rem;
+    padding-bottom: 2.5rem;
+    color: hsl(0, 0%, 55%);
+}
+
+
+@media(min-width:420px) {
+    span {
+        display: inline-block;
+    }
+
+    h1 {
+        max-width: 400px;
+        font-size: 2.5rem;
+    }
+}
+
+@media(min-width:768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1 {
+        max-width: 450px;
+        font-size: 3rem;
+    }
+
+    #open-menu {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+
+
+    }
+
+    .logo-menu {
+        display: none;
+    }
+
+    /* About section */
+
+    .about {
+        display: flex;
+        position: relative;
+    }
+
+    .about-image {
+        max-width: 65%;
+        position: relative;
+    }
+
+    .about-text {
+        text-align: start;
+        width: 50%;
+        background-color: white;
+        position: absolute;
+        bottom: 20px;
+        left: 52%;
+        padding-left: 60px;
+    }
+
+    .about-text p {
+        font-size: 12px;
+    }
+
+    /*    testimonials */
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .testimonial-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .testimonial-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card {
+        width: 25%;
+        flex-direction: row;
+    }
+
+    .btn-1 {
+        display: block;
+    }
+
+    .btn-2 {
+        display: none;
+    }
+
+    /*     footer    */
+    footer {
+        display: flex;
+        justify-content: space-around
+    }
+
+    footer ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    footer span {
+        margin: 0;
+    }
+
+    footer ul li{
+        margin-top:  0.5rem;
+    }
+}
